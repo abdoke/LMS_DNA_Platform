@@ -1,0 +1,6 @@
+INFO     venv:test_login.py:9 Test case started executing
+INFO     venv:login_page.py:17 launching application LMS
+INFO     venv:login_page.py:24 Entering the credentiuals for userhashedintestuser109
+INFO     venv:leave_page.py:24 Validating the user login successful
+INFO     venv:leave_page.py:31 User redirected to Leave Management Tool
+INFO     venv:leave_page.py:36 Validated the Leave Summary Heading

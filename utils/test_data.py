@@ -1,3 +1,6 @@
 class TestData:
-    USERNAME = "hashedintestuser109"
-    PASSWORD = "Hashedintestuser109@12345"
+    USERNAME = "hashedintestuser108"
+    PASSWORD = "Hashedintestuser108@12345"
+    EXPECTED_EMAIL = "hashedintestuser108@deloitte.com"
+    EXPECTED_ROLE = "Quality Engineer-I"
+    EXPECTED_EMP_ID = "Emp Id - 5500967"

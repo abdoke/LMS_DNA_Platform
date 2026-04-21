@@ -1,6 +1,14 @@
+INFO     venv:login_page.py:18 launching application LMS
+INFO     venv:login_page.py:27 Entering the credentials for userhashedintestuser108
+INFO     venv:leave_page.py:42 Verifying total category count
+INFO     venv:leave_page.py:48 Printing details
+INFO     venv:leave_page.py:54 Privileged : -
+INFO     venv:leave_page.py:54 Casual/Sick : -
+INFO     venv:leave_page.py:54 Encashed : -
+INFO     venv:leave_page.py:54 Taken : -
+INFO     venv:leave_page.py:62 Started user validation
+INFO     venv:leave_page.py:72 Verifying the side options count
 INFO     venv:test_login.py:9 Test case started executing
-INFO     venv:login_page.py:17 launching application LMS
-INFO     venv:login_page.py:24 Entering the credentiuals for userhashedintestuser109
-INFO     venv:leave_page.py:24 Validating the user login successful
-INFO     venv:leave_page.py:31 User redirected to Leave Management Tool
-INFO     venv:leave_page.py:36 Validated the Leave Summary Heading
+INFO     venv:login_page.py:18 launching application LMS
+INFO     venv:login_page.py:27 Entering the credentials for userhashedintestuser108
+INFO     venv:leave_page.py:23 Validating the user login successful

@@ -7,15 +7,16 @@ from utils.test_data import TestData
 
 def test_valid_login(page):
     logger.info("Test case started executing")
-    login_page = LoginPage(page)
 
+    #Login flow
+    login_page = LoginPage(page)
     login_page.navigate()
     login_page.click_sso()
     login_page.login(TestData.USERNAME, TestData.PASSWORD)
     
+    #Validation for home screen
     leave_page = LeavePage(page)
     page.wait_for_timeout(30000)
-    
     #leave_page.close_popup()
     leave_page.validation_login_success()
     leave_page.validate_redirection_to_LMS_dashboard()

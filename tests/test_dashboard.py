@@ -4,6 +4,7 @@ from pages.leave_page import LeavePage
 def test_dashboard(login):
     #page=login
     dashboard = LeavePage(login)
+
     expected_email = "hashedintestuser108@deloitte.com"
     expected_role = "Quality Engineer-I"
     expected_emp_id = "Emp Id - 5500967"
@@ -11,7 +12,7 @@ def test_dashboard(login):
     #Verification of 4 categories displayed
     count = dashboard.validate_leave_categories_count()
     print("Total leave categories are: " + str(count) )
-    assert count == 4, f"Expected 4 categories, found{count} "
+    assert count == 4, f"Expected 4 categories, found {count} "
 
     #printing the leave details
     dashboard.print_leave_details()
@@ -28,6 +29,5 @@ def test_dashboard(login):
 
     #side panel option count
     actual_options_count = dashboard.get_side_option_count()
-    print("Side option count " + str(actual_options_count))
     assert actual_options_count == 3, f"Side options mismatch Expected: {4}, Got {actual_options_count}"
 

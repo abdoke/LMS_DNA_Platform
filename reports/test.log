@@ -1,14 +1,34 @@
-INFO     venv:login_page.py:18 launching application LMS
-INFO     venv:login_page.py:27 Entering the credentials for userhashedintestuser108
-INFO     venv:leave_page.py:42 Verifying total category count
-INFO     venv:leave_page.py:48 Printing details
-INFO     venv:leave_page.py:54 Privileged : -
-INFO     venv:leave_page.py:54 Casual/Sick : -
-INFO     venv:leave_page.py:54 Encashed : -
-INFO     venv:leave_page.py:54 Taken : -
-INFO     venv:leave_page.py:62 Started user validation
-INFO     venv:leave_page.py:72 Verifying the side options count
-INFO     venv:test_login.py:9 Test case started executing
-INFO     venv:login_page.py:18 launching application LMS
-INFO     venv:login_page.py:27 Entering the credentials for userhashedintestuser108
-INFO     venv:leave_page.py:23 Validating the user login successful
+INFO     conftest:conftest.py:15 Launching browser
+INFO     venv:login_page.py:20 Launching LMS application
+INFO     venv:login_page.py:30 Clicking SSO button
+INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
+INFO     venv:leave_page.py:150 Applying for leave
+INFO     venv:leave_page.py:178 Leave applied successfully
+INFO     conftest:conftest.py:25 Closing browser
+INFO     conftest:conftest.py:15 Launching browser
+INFO     venv:login_page.py:20 Launching LMS application
+INFO     venv:login_page.py:30 Clicking SSO button
+INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
+INFO     venv:leave_page.py:73 Validating leave category count
+INFO     venv:leave_page.py:77 Total categoeries: 4
+INFO     venv:leave_page.py:86 Printing leave details
+INFO     venv:leave_page.py:92 Privileged : 90.5
+INFO     venv:leave_page.py:92 Casual/Sick : 104
+INFO     venv:leave_page.py:92 Encashed : 00
+INFO     venv:leave_page.py:92 Taken : 02
+INFO     venv:leave_page.py:100 Clicking on profile icon
+INFO     venv:leave_page.py:110 Validating user details
+INFO     venv:leave_page.py:114 Email: hashedintestuser108@deloitte.com
+INFO     venv:leave_page.py:115 Role: Quality Engineer-I
+INFO     venv:leave_page.py:116 Emp_Id: Emp Id - 5500967
+INFO     venv:leave_page.py:129 Verifying the side options count
+INFO     conftest:conftest.py:25 Closing browser
+INFO     conftest:conftest.py:15 Launching browser
+INFO     venv:test_login.py:8 Test case started executing
+INFO     venv:login_page.py:20 Launching LMS application
+INFO     venv:login_page.py:30 Clicking SSO button
+INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
+INFO     venv:leave_page.py:36 Validating the login success
+INFO     venv:leave_page.py:41 login successful
+INFO     venv:test_login.py:22 Test case completed
+INFO     conftest:conftest.py:25 Closing browser

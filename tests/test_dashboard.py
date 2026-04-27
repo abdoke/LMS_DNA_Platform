@@ -1,8 +1,8 @@
-from utils.test_data import TestData
+from venv import logger
 from pages.leave_page import LeavePage
 
 def test_dashboard(login):
-    #page=login
+    logger.info("++++++++++Test case: Dashboard validation started executing++++++++++")
     dashboard = LeavePage(login)
 
     expected_email = "hashedintestuser108@deloitte.com"
@@ -29,5 +29,5 @@ def test_dashboard(login):
 
     #side panel option count
     actual_options_count = dashboard.get_side_option_count()
-    assert actual_options_count == 3, f"Side options mismatch Expected: {4}, Got {actual_options_count}"
+    assert actual_options_count == 3, f"Side options mismatch Expected: {3}, Got {actual_options_count}"
 

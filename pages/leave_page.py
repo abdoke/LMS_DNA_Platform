@@ -1,7 +1,6 @@
 import time
 from venv import logger
 from playwright.sync_api import Page, expect
-from conftest import page
 from pages.base_page import BasePage
 
 class LeavePage(BasePage):
@@ -24,17 +23,23 @@ class LeavePage(BasePage):
 
         self.leave_type_dropdown = page.locator("xpath=(//div[contains(@class, 'ant-select-selector')])[1]")
         self.leave_type_option = page.locator("xpath=(//div[@class='ant-select-item-option-content'])[4]")
-        self.start_date = page.locator("//input[@placeholder='Start Date']")
-        self.end_date = page.locator("//input[@placeholder='End Date']")
-        self.reason_input = page.locator("//textarea[@placeholder='Input details']")
-        self.apply_button = page.locator("//button[.//span[text()='Apply']]")
+        self.start_date = page.locator("xpath=(//input[@placeholder='Start Date'])")
+        self.end_date = page.locator("xpath=(//input[@placeholder='End Date'])")
+        self.reason_input = page.locator("xpath=(//textarea[@placeholder='Input details'])")
+        self.apply_button = page.locator("xpath=(//span[text()='Apply'])")
+
         self.sucess_popup = page.locator("css=.toast-success")
+
+        self.logout_option = page.locator("xpath=(//span[text()='Logout'])")
+
+        self.holiday_calender = page.locator("xpath=(//li[contains(@data-menu-id, 'holiday-calendar')])")
+        self.tracker = page.locator("xpath=(//li[contains(@data-menu-id, 'my')])")
+
 
     #Validation for login
     def validation_login_success(self):
         try:
             logger.info("Validating the login success")
-            #self.page.wait_for_load_state("netwokidle")
             self.user_icon.first.wait_for(state="visible")
             self.wait_for_element(self.user_icon)
             expect(self.user_icon).to_be_visible(timeout=10000)
@@ -97,7 +102,7 @@ class LeavePage(BasePage):
     #Click on profile
     def click_profile(self):
         try:
-            logger.info("Clicking on profile icon")
+            logger.info("Clicking on profile icon for user validation")
             self.wait_for_element(self.user_icon)
             self.user_icon.click()
         except Exception as e:
@@ -143,6 +148,15 @@ class LeavePage(BasePage):
         except Exception as e:
             logger.error(f"Click apply leave failed: {str(e)}")
             raise
+    
+    def click_apply(self):
+        try:
+            logger.info("Click on apply to submit")
+            self.wait_for_element(self.apply_button)
+            self.apply_button.click()
+        except Exception as e:
+            logger.error(f"Click to apply for submit leave failed: {str(e)}")
+            raise
 
     #Apply for leave
     def apply_leave(self,  reason="Leave Test"):
@@ -154,31 +168,54 @@ class LeavePage(BasePage):
             self.leave_type_dropdown.click()
             self.leave_type_option.click()
             
-            #Need to update
-            """
-            #self.start_date.click()
             self.start_date.click()
-            nxt_btn = page.locator("//button[@aria-label='Next month (PageDown)']")
-            while True:
-                month = self.page.locator(".ant-picker-month-btn").inner_text()
-                if month.strip() == "Nov":
-                    break
-                nxt_btn.click()
-            self.page.locator("//div[text()='18']").click()
-
-            time.sleep(2)
-            #self.end_date.click()
+            self.start_date.fill("2026-11-18")
+            self.start_date.press("Enter")
+            self.end_date.click()
             self.end_date.fill("2026-11-19")
-            page.self.end_date.press("Enter")
+            self.end_date.press("Enter")
             time.sleep(2)
-            #self.reason_input.click()
-            self.reason_input.fill(reason)
+            self.reason_input.fill("planned Casual leave")
+            self.click_apply()
             time.sleep(2)
-            """
+
             logger.info("Leave applied successfully")
         except Exception as e:
                 logger.error(f"applying leave failed: {str(e)}")
                 raise
+    
+    #Click on logout
+    def click_logout_option(self):
+        try:
+            logger.info("Clicking on logout option")
+            self.wait_for_element(self.logout_option)
+            self.logout_option.click()
+            logger.info("logged out successful")
+        except Exception as e:
+            logger.error(f"Failed to logout: {str(e)}")
+            raise
+
+    #Click on holiday calender
+    def click_holiday_calender(self):
+        try:
+            logger.info("Clicking on holiday calender")
+            self.wait_for_element(self.holiday_calender)
+            self.holiday_calender.click()
+            time.sleep(2)
+        except Exception as e:
+            logger.error(f"Failed to click holiday calender: {str(e)}")
+            raise
+
+    #Click on Tracker
+    def click_tracker(self):
+        try:
+            logger.info("Clicking on tracker options")
+            self.wait_for_element(self.tracker)
+            self.tracker.click()
+            time.sleep(2)
+        except Exception as e:
+            logger.error(f"Failed to tracker: {str(e)}")
+            raise
 
 
         

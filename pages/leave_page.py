@@ -19,6 +19,7 @@ class LeavePage(BasePage):
         self.side_panel_option = page.locator("xpath=//li[@role='menuitem']")
         self.user_icon = page.locator ("xpath=//div[@class='user-profile-container']")
         self.apply_leave_click = page.locator("xpath=//span[text()='Apply Leave']")
+        self.apply_wfh_click = page.locator("xpath=//span[text()='Apply Work from Home']")
         self.side_panel_options = page.locator("xpath=//li[@role='menuitem']")
 
         self.leave_type_dropdown = page.locator("xpath=(//div[contains(@class, 'ant-select-selector')])[1]")
@@ -27,6 +28,12 @@ class LeavePage(BasePage):
         self.end_date = page.locator("xpath=(//input[@placeholder='End Date'])")
         self.reason_input = page.locator("xpath=(//textarea[@placeholder='Input details'])")
         self.apply_button = page.locator("xpath=(//span[text()='Apply'])")
+
+        self.wfh_type_dropdown = page.locator("xpath=(//div[@class='ant-select-selector'])[1]")
+        self.wfh_type_option = page.locator("xpath=(//div[@class='ant-select-item-option-content'])[2]")
+        self.wfh_start_date = page.locator("xpath=(//input[@placeholder='Start Date'])")
+        self.wfh_end_date = page.locator("xpath=(//input[@placeholder='End Date'])")
+        self.wfh_reason_input = page.locator("xpath=(//textarea[@placeholder='Input details'])")
 
         self.sucess_popup = page.locator("css=.toast-success")
 
@@ -217,6 +224,31 @@ class LeavePage(BasePage):
         except Exception as e:
             logger.error(f"Failed to tracker: {str(e)}")
             raise
+
+    def apply_wfh(self,  reason="wfh Test"):
+        try:
+            logger.info("Applying for wfh")
+            self.apply_wfh_click.click()
+            self.wfh_type_dropdown.first.wait_for(state="visible")
+            self.wait_for_element(self.wfh_type_dropdown)
+            self.wfh_type_dropdown.click()
+            self.wfh_type_option.click()
+            
+            self.wfh_start_date.click()
+            self.wfh_start_date.fill("2026-11-11")
+            self.wfh_start_date.press("Enter")
+            self.wfh_end_date.click()
+            self.wfh_end_date.fill("2026-11-12")
+            self.wfh_end_date.press("Enter")
+            time.sleep(2)
+            self.wfh_reason_input.fill("planned wfh")
+            self.click_apply()
+            time.sleep(2)
+
+            logger.info("wfh applied successfully")
+        except Exception as e:
+                logger.error(f"applying wfh failed: {str(e)}")
+                raise
 
 
         

@@ -3,49 +3,71 @@ INFO     venv:login_page.py:21 Launching LMS application
 INFO     venv:login_page.py:31 Clicking SSO button
 INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
 INFO     venv:test_apply_leave.py:6 ++++++++++Test case: Apply leave started executing++++++++++
-INFO     venv:leave_page.py:165 Applying for leave
-INFO     venv:leave_page.py:155 Click on apply to submit
-INFO     venv:leave_page.py:183 Leave applied successfully
+INFO     venv:leave_page.py:172 Applying for leave
+INFO     venv:leave_page.py:162 Click on apply to submit
+INFO     venv:leave_page.py:190 Leave applied successfully
 INFO     conftest:conftest.py:25 Closing browser
 INFO     conftest:conftest.py:15 Launching browser
 INFO     venv:login_page.py:21 Launching LMS application
 INFO     venv:login_page.py:31 Clicking SSO button
 INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
 INFO     venv:test_apply_leave.py:11 ++++++++++Test case: Cancel leave started executing++++++++++
-INFO     venv:leave_page.py:213 Clicking on tracker options
-INFO     venv:tracker_page.py:22 Clicking on filter
-INFO     venv:tracker_page.py:32 Clicking on leaves checkbox
-INFO     venv:tracker_page.py:42 Clicking on apply button
-INFO     venv:tracker_page.py:51 Clicking on cancel
-INFO     venv:tracker_page.py:61 Clicking on confirm pop up
-INFO     venv:tracker_page.py:65 Leave cancelled successfully
+INFO     venv:leave_page.py:220 Clicking on tracker options
+INFO     venv:tracker_page.py:26 Clicking on filter
+INFO     venv:tracker_page.py:36 Clicking on leaves checkbox
+INFO     venv:tracker_page.py:55 Clicking on apply button
+INFO     venv:tracker_page.py:64 Clicking on cancel
+INFO     venv:tracker_page.py:74 Clicking on confirm pop up
+INFO     venv:tracker_page.py:78 Leave cancelled successfully
+INFO     conftest:conftest.py:25 Closing browser
+INFO     conftest:conftest.py:15 Launching browser
+INFO     venv:login_page.py:21 Launching LMS application
+INFO     venv:login_page.py:31 Clicking SSO button
+INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
+INFO     venv:test_apply_wfh.py:6 ++++++++++Test case: Apply wfh started executing++++++++++
+INFO     venv:leave_page.py:230 Applying for wfh
+INFO     venv:leave_page.py:162 Click on apply to submit
+INFO     venv:leave_page.py:248 wfh applied successfully
+INFO     conftest:conftest.py:25 Closing browser
+INFO     conftest:conftest.py:15 Launching browser
+INFO     venv:login_page.py:21 Launching LMS application
+INFO     venv:login_page.py:31 Clicking SSO button
+INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
+INFO     venv:test_apply_wfh.py:11 ++++++++++Test case: Cancel wfh started executing++++++++++
+INFO     venv:leave_page.py:220 Clicking on tracker options
+INFO     venv:tracker_page.py:26 Clicking on filter
+INFO     venv:tracker_page.py:45 Clicking on wfh checkbox
+INFO     venv:tracker_page.py:55 Clicking on apply button
+INFO     venv:tracker_page.py:85 Clicking on wfh cancel
+INFO     venv:tracker_page.py:74 Clicking on confirm pop up
+INFO     venv:tracker_page.py:78 Leave cancelled successfully
 INFO     conftest:conftest.py:25 Closing browser
 INFO     conftest:conftest.py:15 Launching browser
 INFO     venv:login_page.py:21 Launching LMS application
 INFO     venv:login_page.py:31 Clicking SSO button
 INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
 INFO     venv:test_dashboard.py:5 ++++++++++Test case: Dashboard validation started executing++++++++++
-INFO     venv:leave_page.py:78 Validating leave category count
-INFO     venv:leave_page.py:82 Total categoeries: 4
-INFO     venv:leave_page.py:91 Printing leave details
-INFO     venv:leave_page.py:97 Privileged : 90.5
-INFO     venv:leave_page.py:97 Casual/Sick : 106
-INFO     venv:leave_page.py:97 Encashed : 00
-INFO     venv:leave_page.py:97 Taken : 00
-INFO     venv:leave_page.py:105 Clicking on profile icon for user validation
-INFO     venv:leave_page.py:115 Validating user details
-INFO     venv:leave_page.py:119 Email: hashedintestuser108@deloitte.com
-INFO     venv:leave_page.py:120 Role: Quality Engineer-I
-INFO     venv:leave_page.py:121 Emp_Id: Emp Id - 5500967
-INFO     venv:leave_page.py:134 Verifying the side options count
-INFO     venv:leave_page.py:137 Side panel option count: 3
+INFO     venv:leave_page.py:85 Validating leave category count
+INFO     venv:leave_page.py:89 Total categoeries: 4
+INFO     venv:leave_page.py:98 Printing leave details
+INFO     venv:leave_page.py:104 Privileged : 90.5
+INFO     venv:leave_page.py:104 Casual/Sick : 106
+INFO     venv:leave_page.py:104 Encashed : 00
+INFO     venv:leave_page.py:104 Taken : 00
+INFO     venv:leave_page.py:112 Clicking on profile icon for user validation
+INFO     venv:leave_page.py:122 Validating user details
+INFO     venv:leave_page.py:126 Email: hashedintestuser108@deloitte.com
+INFO     venv:leave_page.py:127 Role: Quality Engineer-I
+INFO     venv:leave_page.py:128 Emp_Id: Emp Id - 5500967
+INFO     venv:leave_page.py:141 Verifying the side options count
+INFO     venv:leave_page.py:144 Side panel option count: 3
 INFO     conftest:conftest.py:25 Closing browser
 INFO     conftest:conftest.py:15 Launching browser
 INFO     venv:login_page.py:21 Launching LMS application
 INFO     venv:login_page.py:31 Clicking SSO button
 INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
 INFO     venv:test_holiday_calender.py:6 ++++++++++Test case: Holiday calender details started executing++++++++++
-INFO     venv:leave_page.py:202 Clicking on holiday calender
+INFO     venv:leave_page.py:209 Clicking on holiday calender
 INFO     venv:holiday_calender_page.py:15 Fetching leave details
 INFO     venv:holiday_calender_page.py:21 January
 INFO     venv:holiday_calender_page.py:30 15 / Thu
@@ -104,10 +126,10 @@ INFO     venv:test_login.py:7 ++++++++++Test case: Login validation started exec
 INFO     venv:login_page.py:21 Launching LMS application
 INFO     venv:login_page.py:31 Clicking SSO button
 INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
-INFO     venv:leave_page.py:42 Validating the login success
-INFO     venv:leave_page.py:46 login successful
-INFO     venv:leave_page.py:66 Validation leave summary heading
-INFO     venv:leave_page.py:70 Heading validated: Leave Summary
+INFO     venv:leave_page.py:49 Validating the login success
+INFO     venv:leave_page.py:53 login successful
+INFO     venv:leave_page.py:73 Validation leave summary heading
+INFO     venv:leave_page.py:77 Heading validated: Leave Summary
 INFO     venv:test_login.py:19 Test case completed
 INFO     conftest:conftest.py:25 Closing browser
 INFO     conftest:conftest.py:15 Launching browser
@@ -116,9 +138,9 @@ INFO     venv:login_page.py:31 Clicking SSO button
 INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
 INFO     venv:test_logout.py:7 ++++++++++Test case: Logout validation started executing++++++++++
 INFO     venv:test_logout.py:10 logging out
-INFO     venv:leave_page.py:105 Clicking on profile icon for user validation
-INFO     venv:leave_page.py:191 Clicking on logout option
-INFO     venv:leave_page.py:194 logged out successful
+INFO     venv:leave_page.py:112 Clicking on profile icon for user validation
+INFO     venv:leave_page.py:198 Clicking on logout option
+INFO     venv:leave_page.py:201 logged out successful
 INFO     venv:login_page.py:56 validation logged out successful
 INFO     venv:login_page.py:59 User logged out successfully
 INFO     conftest:conftest.py:25 Closing browser

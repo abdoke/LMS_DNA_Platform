@@ -17,6 +17,10 @@ class TrackerPage(BasePage):
         self.type = page.locator("xpath=(//span[@aria-label='collapsed'])")
         self.confirm = page.locator("xpath=(//span[text()='Confirm'])")
 
+        self.wfh = page.locator("xpath=//span[text()='Work from Home']")
+        self.wfh_date = page.locator("xpath=(//div[text()='11 Nov - 12 Nov'])")
+        self.wfh_cancel = self.wfh_date.locator("xpath=(//span[text()='Cancel'])")
+
     def click_filter(self):
         try:
             logger.info("Clicking on filter")
@@ -35,6 +39,15 @@ class TrackerPage(BasePage):
             time.sleep(2)
         except Exception as e:
             logger.error(f"Failed to click leaves: {str(e)}")
+            raise
+    def click_wfh(self):
+        try:
+            logger.info("Clicking on wfh checkbox")
+            self.wait_for_element(self.wfh)
+            self.wfh.click()
+            time.sleep(2)
+        except Exception as e:
+            logger.error(f"Failed to click wfh: {str(e)}")
             raise
 
     def click_apply(self):
@@ -65,6 +78,16 @@ class TrackerPage(BasePage):
             logger.info("Leave cancelled successfully")
         except Exception as e:
             logger.error(f"Failed to click confirm: {str(e)}")
+            raise
+
+    def click_wfh_cancel(self):
+        try:
+            logger.info("Clicking on wfh cancel")
+            self.wait_for_element(self.wfh_cancel)
+            self.wfh_cancel.click()
+            time.sleep(2)
+        except Exception as e:
+            logger.error(f"Failed to cancel wfh: {str(e)}")
             raise
     
     

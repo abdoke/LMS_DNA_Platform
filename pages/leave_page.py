@@ -133,8 +133,9 @@ class LeavePage(BasePage):
         try:
             logger.info("Verifying the side options count")
             self.wait_for_element(self.side_panel_option)
-            locals.__init__(f"Side panel option count: {self.side_panel_option.count()}")
-            return self.side_panel_option.count()
+            count = self.side_panel_option.count()
+            logger.info(f"Side panel option count: {count}")
+            return count
         except Exception as e:
             logger.error(f"Side option count validation failed: {str(e)}")
             raise

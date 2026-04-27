@@ -3,16 +3,16 @@ INFO     venv:login_page.py:21 Launching LMS application
 INFO     venv:login_page.py:31 Clicking SSO button
 INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
 INFO     venv:test_apply_leave.py:6 ++++++++++Test case: Apply leave started executing++++++++++
-INFO     venv:leave_page.py:164 Applying for leave
-INFO     venv:leave_page.py:154 Click on apply to submit
-INFO     venv:leave_page.py:182 Leave applied successfully
+INFO     venv:leave_page.py:165 Applying for leave
+INFO     venv:leave_page.py:155 Click on apply to submit
+INFO     venv:leave_page.py:183 Leave applied successfully
 INFO     conftest:conftest.py:25 Closing browser
 INFO     conftest:conftest.py:15 Launching browser
 INFO     venv:login_page.py:21 Launching LMS application
 INFO     venv:login_page.py:31 Clicking SSO button
 INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
 INFO     venv:test_apply_leave.py:11 ++++++++++Test case: Cancel leave started executing++++++++++
-INFO     venv:leave_page.py:212 Clicking on tracker options
+INFO     venv:leave_page.py:213 Clicking on tracker options
 INFO     venv:tracker_page.py:22 Clicking on filter
 INFO     venv:tracker_page.py:32 Clicking on leaves checkbox
 INFO     venv:tracker_page.py:42 Clicking on apply button
@@ -38,13 +38,14 @@ INFO     venv:leave_page.py:119 Email: hashedintestuser108@deloitte.com
 INFO     venv:leave_page.py:120 Role: Quality Engineer-I
 INFO     venv:leave_page.py:121 Emp_Id: Emp Id - 5500967
 INFO     venv:leave_page.py:134 Verifying the side options count
+INFO     venv:leave_page.py:137 Side panel option count: 3
 INFO     conftest:conftest.py:25 Closing browser
 INFO     conftest:conftest.py:15 Launching browser
 INFO     venv:login_page.py:21 Launching LMS application
 INFO     venv:login_page.py:31 Clicking SSO button
 INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestuser108
 INFO     venv:test_holiday_calender.py:6 ++++++++++Test case: Holiday calender details started executing++++++++++
-INFO     venv:leave_page.py:201 Clicking on holiday calender
+INFO     venv:leave_page.py:202 Clicking on holiday calender
 INFO     venv:holiday_calender_page.py:15 Fetching leave details
 INFO     venv:holiday_calender_page.py:21 January
 INFO     venv:holiday_calender_page.py:30 15 / Thu
@@ -116,8 +117,8 @@ INFO     venv:login_page.py:39 Entering the credentials for user: hashedintestus
 INFO     venv:test_logout.py:7 ++++++++++Test case: Logout validation started executing++++++++++
 INFO     venv:test_logout.py:10 logging out
 INFO     venv:leave_page.py:105 Clicking on profile icon for user validation
-INFO     venv:leave_page.py:190 Clicking on logout option
-INFO     venv:leave_page.py:193 logged out successful
+INFO     venv:leave_page.py:191 Clicking on logout option
+INFO     venv:leave_page.py:194 logged out successful
 INFO     venv:login_page.py:56 validation logged out successful
 INFO     venv:login_page.py:59 User logged out successfully
 INFO     conftest:conftest.py:25 Closing browser
